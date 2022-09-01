@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="./img/logo.png"></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Series</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Lançamentos</a></li>
+            <li><a href="#">Minha Lista</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Pesquisar">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="bg"></div>
+        <div class="content">
+            <img src="./img/title.png" class="movieTitle">
+            <h4>
+                <span>2022</span>
+                <span><i>16+</i></span>
+                <span>4 Temporadas</span>
+                <span>Aventura</span>
+            </h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation.
+            </p>
+            <div class="buttons">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+                <a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Minha Lista</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo()"><img src="./img/play.png">Assistir Trailer</a>
+    </div>
+    <div class="trailer">
+        <video src="./img/trailer.mp4" controls="true" ></video>
+        <img src="./img/close.png" class="close" onclick="toggleVideo()">
+    </div>
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video =  document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+
+    </script>
+</body>
+</html>
